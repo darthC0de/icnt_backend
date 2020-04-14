@@ -10,4 +10,7 @@ Projeto visando criar uma rede onde os interessados poderão tanto oferecer quan
   - [ ] Controle de usuários cadastrados
 
 ### FrontEnd
- O frontend está sendo construido com ReactJS, 
+ O frontend está sendo construido com ReactJS
+
+### Mobile
+ O Mobile está sendo construido com ReactNative e Expo
