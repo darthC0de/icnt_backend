@@ -7,7 +7,6 @@ module.exports = {
             .select(
                 'services.*',
                 'company.name',
-                'company.phone',
                 'company.email',
                 'company.whatsapp',
                 'company.city',
@@ -23,8 +22,8 @@ module.exports = {
             description,
             cid
         })
-        return res.json({
-            status:"Saved"
+        return res.status(201).json({
+            status:"Service created"
         })
     }
 }

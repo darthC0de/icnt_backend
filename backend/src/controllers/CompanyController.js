@@ -6,20 +6,19 @@ module.exports = {
         return res.json(companies)
     },
     async create(req, res){
-        const { name, login, lpassword, phone, number, email, city, uf} = req.body;
+        const { name, login, lpassword, number, email, city, uf} = req.body;
         const whatsapp = "+55" + number;
         password = Encrypt.encrypt(lpassword);
         await connection('company').insert({
                 name,
                 login,
                 password,
-                phone,
                 whatsapp,
                 email,
                 city,
                 uf
             });
-        return res.send('created')
+        return res.status(201).json({message:"Company created"});
     },
     async delete(req, res){
         const {id} = req.body;
