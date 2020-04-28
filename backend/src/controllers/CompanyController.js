@@ -3,7 +3,7 @@ const Encrypt = require('../utils/cryptography');
 module.exports = {
     async index(req, res){
         const companies = await connection('company').select('*');
-        return res.json(companies)
+        return res.status(200).json(companies)
     },
     async create(req, res){
         const { name, login, lpassword, number, email, city, uf} = req.body;
@@ -33,11 +33,9 @@ module.exports = {
             await connection('company')
                 .where('id',id)
                 .delete();
-            return res.json({
-                status:"Deleted"
-            })
+            return res.status(200).json({status:"Deleted"});
         } else {
-            return res.json({
+            return res.status(400).json({
                 status: "Failed"
             })
         }

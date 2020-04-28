@@ -12,7 +12,7 @@ module.exports = {
                 'company.city',
                 'company.uf',
             );
-        return res.json(services);
+        return res.status(200).json(services);
     },
     async create(req, res){
         const{ title, description,cid } = req.body;
