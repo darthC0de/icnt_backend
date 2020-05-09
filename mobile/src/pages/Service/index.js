@@ -1,11 +1,16 @@
 import React from 'react';
-import { Button, Text, View, StatusBar } from 'react-native';
+import { StyleSheet, Text, View, StatusBar  } from 'react-native';
 
 export default function Service() {
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      
-      <Text>At Service</Text>
+      <View style={{
+        height: 30,
+        border: 3,
+        borderColor: "#000"
+      }}>
+        <Text>At Service</Text>
+      </View>
       
     </View>
   );

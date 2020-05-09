@@ -15,10 +15,8 @@ const styles = StyleSheet.create({
         justifyContent: 'space-around',
         alignItems: 'center',
         flexDirection: 'row',
+        backgroundColor:'#60f13b',
         zIndex:4
-    },
-    tabBarIcon:{
-        color:'#60f13b',
     }
 })
 
