@@ -1,6 +1,7 @@
 name: 'Delete branch on merge'
-on: pull_request
-
+on: 
+  pull_request:
+    types: closed
 jobs:
   deleteBranch:
     runs-on: ubuntu-latest
