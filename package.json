@@ -11,8 +11,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "nodemon": "^2.0.12",
-    "sqlite3": "^5.0.2"
+    "nodemon": "2.0.12",
+    "sqlite3": "5.0.2"
   },
   "dependencies": {
     "cors": "^2.8.5",
