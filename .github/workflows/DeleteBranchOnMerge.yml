@@ -1,10 +1,20 @@
 name: 'Delete branch on merge'
-on: 
+on:
   pull_request:
-    types: closed
+    types:
+      - closed
 jobs:
-  deleteBranch:
+  automerge:
     runs-on: ubuntu-latest
     steps:
-      - name: delete-merged-branch-asdf
-        uses: zjutszl/my-cool-action@v1.0.0-rc.2
+      - name: Retrieve the branch name related to the current pull request and its URL
+        id: current_pr_branch
+        uses: stefanbauer/action-current-pr-branch@v1
+        with:
+          github_token: ${{ secrets.TOKEN }}
+      - name: Delete merged branch
+        uses: koj-co/delete-merged-action@master
+        with:
+          branches: "${{ steps.current_pr_branch.outputs.branch_name }}"
+        env:
+          GITHUB_TOKEN: "${{ secrets.TOKEN }}"
