@@ -15,6 +15,6 @@ jobs:
       - name: Delete merged branch
         uses: koj-co/delete-merged-action@master
         with:
-          branches: "${{ steps.current_pr_branch.outputs.branch_name }}"
+          branches: "!master,!main, ${{ steps.current_pr_branch.outputs.branch_name }}"
         env:
           GITHUB_TOKEN: "${{ secrets.TOKEN }}"
