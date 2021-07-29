@@ -1,0 +1,9 @@
+name: 'Delete branch on merge'
+on: pull_request
+
+jobs:
+  deleteBranch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: delete-merged-branch-asdf
+        uses: zjutszl/my-cool-action@v1.0.0-rc.2
