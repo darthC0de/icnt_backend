@@ -1,6 +1,6 @@
 name: Auto Assign Issue to project
 on: [
-  issues,
+  issues
 ]
 jobs:
   main:
