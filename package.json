@@ -19,17 +19,5 @@
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
     "knex": "^0.95.7"
-  },
-  "renovate":{
-    "branchPrefix": "[Updates]:",
-    "packageRules": [
-      {
-        "updateTypes": ["minor", "patch", "pin", "digest"],
-        "automerge": true
-      }
-    ],
-    "extends": [
-      "config:base"
-    ]
   }
 }
